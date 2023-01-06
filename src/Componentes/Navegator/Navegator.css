@@ -1,0 +1,6 @@
+@import url(../prestablecidos.css);
+
+header{
+    padding: 20px;
+    background-color: var(--verdeOscuro);
+}

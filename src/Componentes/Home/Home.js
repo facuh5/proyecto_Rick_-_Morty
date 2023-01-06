@@ -8,8 +8,8 @@ export default function Home() {
         <main className="cuadroContenedor">
             <h1>Project Rick & Morty</h1>
             <lu>
-                <Item prop="Characters" clase="item separacionHome"/>
-                <Item prop="Contact" clase="item separacionHome"/>
+                <Item prop="Characters" clase="item separacionHome" identificador="Characters"/>
+                <Item prop="Contact" clase="item separacionHome" identificador="Contact"/>
             </lu>
         </main>
     )
