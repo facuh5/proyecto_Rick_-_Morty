@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+
+:root{
+    --verdeClaro: #6ECCAF;
+    --verdeOscuro: #344D67;
+    --blanco: whitesmoke;
+    --blancoTraslucido: #ffffffe6;
+    --fondoForm: #5c7592e6;
+    --textoForm: #223142;
+    --fondoTarjetas: #223142;
+}
+
+*{
+    font-family: 'Raleway';
+}
