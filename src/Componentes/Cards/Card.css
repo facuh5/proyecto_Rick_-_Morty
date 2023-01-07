@@ -1,0 +1,30 @@
+@import url(../prestablecidos.css);
+
+.tarjetaIndividual{
+    background-color: var(--fondoTarjetas);
+    height: 390px;
+    width: 320px;
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.parteVisible{
+    height: 375px;
+    width: 300px;
+}
+
+.visible{
+    background-color: var(--verdeClaro);
+    color: var(--verdeOscuro);
+    cursor:pointer;
+    padding: 10px;
+}
+
+h2{
+    color: var(--blanco);
+    margin: 0px;
+}
