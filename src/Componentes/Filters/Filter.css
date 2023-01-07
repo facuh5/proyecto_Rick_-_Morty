@@ -1,0 +1,33 @@
+@import url(../prestablecidos.css);
+
+.filtroInd{
+    background-color: var(--verdeOscuro);
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+p{
+    margin-right: 2px;
+}
+
+.texto{
+    padding: 8px;
+    margin-right: 40px;
+}
+
+.botonFiltro{
+    background-color: var(--verdeClaro);
+    padding: 5px;
+    margin:0px;
+}
+
+.botonFiltro:active{
+    background-color: var(--fondoTarjetas);
+}
+
+.botonFiltro:checked{
+    background-color: var(--fondoTarjetas);
+}

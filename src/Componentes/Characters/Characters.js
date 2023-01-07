@@ -8,7 +8,7 @@ export default function Characters(){
     
     let [arrayCompleto, setArrayCompleto]=useState([])
     let [arrayActual, setArrayActual]=useState([])
-    let filtrosActivos = 0
+    // let filtrosActivos = 0
     // ---------------------------------------------------------------------------------
     // ----------------------- Manejo de la API (info) ---------------------------------
     // ---------------------------------------------------------------------------------
@@ -36,8 +36,9 @@ export default function Characters(){
     // ------------------------- Manejo de los filtros ---------------------------------
     // ---------------------------------------------------------------------------------
     
-    const mostrarValor =(event)=>{
+    const resultadoFiltro =(event)=>{
         // se fija si esta o no checked,tildado
+        let filtrosActivos = 0
         if(event.target.checked){
                 let datoFiltro=event.target.value;
                 if(datoFiltro === "Alive" || datoFiltro === "Dead"){
@@ -59,7 +60,7 @@ export default function Characters(){
 
             setArrayActual(arrayCompleto)
             // ver como hacer para que si hay 2 filtros activados y se quita uno el otro se mantenga (contador)
-            
+
         }
     }
 
@@ -67,11 +68,17 @@ export default function Characters(){
     return(
         <div>
             <Navegation/>
-            <Filter  filtroEnPantalla="Character Alive" datoFiltro="Alive" muestraValor={mostrarValor}/>
-            <Filter  filtroEnPantalla="Character Dead" datoFiltro="Dead" muestraValor={mostrarValor}/>
-            <Filter  filtroEnPantalla="Male" datoFiltro="Male" muestraValor={mostrarValor}/>
-            <Filter  filtroEnPantalla="Female" datoFiltro="Female" muestraValor={mostrarValor}/>
-            <Filter  filtroEnPantalla="Origin Unknown" datoFiltro="Unknown" muestraValor={mostrarValor}/>
+            {/* Probar hacer otro componente que contenga TODO lo de los filtros */}
+            <section className='filtros'>
+                <h1 className='titFiltros'>Filters</h1>
+                <div className='contFiltro'>
+                    <Filter  filtroEnPantalla="Character Alive" datoFiltro="Alive" muestraValor={resultadoFiltro}/>
+                    <Filter  filtroEnPantalla="Character Dead" datoFiltro="Dead" muestraValor={resultadoFiltro}/>
+                    <Filter  filtroEnPantalla="Male" datoFiltro="Male" muestraValor={resultadoFiltro}/>
+                    <Filter  filtroEnPantalla="Female" datoFiltro="Female" muestraValor={resultadoFiltro}/>
+                    <Filter  filtroEnPantalla="Origin Unknown" datoFiltro="unknown" muestraValor={resultadoFiltro}/>
+                </div>
+            </section>
             <CardInformation lista={arrayActual}/>
         </div>
     )

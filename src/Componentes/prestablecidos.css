@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap'); */
+
 
 :root{
     --verdeClaro: #6ECCAF;
@@ -12,5 +15,5 @@
 
 *{
     font-family: 'Raleway';
-    font-weight: bold;
+    /* font-weight: bold; */
 }
