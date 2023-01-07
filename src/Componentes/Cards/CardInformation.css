@@ -1,1 +1,9 @@
 @import url(../prestablecidos.css);
+
+.contenedorTarjetas{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+}

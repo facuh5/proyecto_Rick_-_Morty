@@ -10,11 +10,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 
 .parteVisible{
     height: 375px;
     width: 300px;
+    margin-bottom: 0px;
 }
 
 .visible{
@@ -22,9 +24,12 @@
     color: var(--verdeOscuro);
     cursor:pointer;
     padding: 10px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: medium;
 }
 
-h2{
+.nombrePersonaje{
     color: var(--blanco);
     margin: 0px;
 }

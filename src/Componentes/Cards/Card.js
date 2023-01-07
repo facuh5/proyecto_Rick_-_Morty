@@ -6,7 +6,7 @@ export default function Card({infoPersonaje}){
 
             <div className="parteVisible">
                 <img src={infoPersonaje.image}/>
-                <h2>{infoPersonaje.name}</h2>
+                <h2 className='nombrePersonaje'>{infoPersonaje.name}</h2>
                 <button className='visible'>Now More...</button>
             </div>
 
