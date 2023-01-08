@@ -7,8 +7,8 @@ import Contact from './Componentes/Contact/Contact';
 function App() {
   return (
     <div className="App">
-      <Contact/>
-      {/* <Characters/> */}
+      {/* <Contact/> */}
+      <Characters/>
       {/* <Navegation/> */}
       {/* <Home/> */}
     </div>

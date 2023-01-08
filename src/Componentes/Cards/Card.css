@@ -1,7 +1,13 @@
 @import url(../prestablecidos.css);
 
-.parteVisible{
+.tarjetaIndividual{
     background-color: var(--fondoTarjetas);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.parteVisible{
+    
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -29,4 +35,45 @@
 
 .tarjetaMasAncha{
     white-space: nowrap;
+}
+
+
+/* TARJETA INVISIBLE */
+
+.parteInvisible{
+    /* display: none; */
+    width: 100%;
+    margin: 10px;
+}
+
+.cruz{
+    background-color: var(--verdeClaro);
+    color: var(--verdeOscuro);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.renglonInformativo{
+    border: solid;
+    border-color: black;
+    border-width: 0.5px;
+    margin: 0px;
+    padding: 5px;
+}
+
+.pTitulo{
+    margin: 0px;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.pInfo{
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.renglonInformativo:hover{
+    cursor: pointer;
+    background-color: var(--verdeClaro);
 }
