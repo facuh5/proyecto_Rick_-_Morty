@@ -6,15 +6,15 @@ export default function Form () {
         <main className='espacioOcupar'>
             <form className='formulario'>
                 <div id='name' className='dentroForm'> 
-                    <label>Name</label>
+                    <label className='labelForm'>Name</label>
                     <Input tipo="text"/>
                 </div>
                 <div id='email' className='dentroForm'>
-                    <label>Email</label>
+                    <label className='labelForm'>Email</label>
                     <Input tipo="email"/>
                 </div>
                 <div id='mensaje' className='dentroForm'>
-                    <label>Message</label>
+                    <label className='labelForm'>Message</label>
                     <Input tipo="password"/>
                 </div>
                 

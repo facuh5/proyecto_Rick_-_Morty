@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-    
+
 }
 
 .dentroForm{
@@ -17,4 +17,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.labelForm{
+    color: var(--textoForm)
 }

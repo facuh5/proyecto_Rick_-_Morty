@@ -1,1 +1,6 @@
 @import url(../prestablecidos.css);
+
+
+.inputForm{
+    color: var(--textoForm);
+}
