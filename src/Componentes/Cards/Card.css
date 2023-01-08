@@ -1,16 +1,5 @@
 @import url(../prestablecidos.css);
 
-.tarjetaIndividual{
-    /* background-color: var(--fondoTarjetas);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    border-radius: 5px;
-    padding: 10px; */
-}
-
 .parteVisible{
     background-color: var(--fondoTarjetas);
     display:flex;

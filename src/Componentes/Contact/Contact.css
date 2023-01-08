@@ -1,0 +1,19 @@
+@import url(../prestablecidos.css);
+
+.contenedorInfo{
+    background-color: var(--fondoForm);
+    width: 75%;
+    margin: 50px auto;
+}
+
+.tituloPag{
+    color: var(--textoForm);
+    font-size: 2.5em;
+    padding: 20px;
+}
+
+.tituloInformativo{
+    color: var(--textoForm);
+    padding: 20px;
+    
+}
