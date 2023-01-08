@@ -2,14 +2,28 @@
 
 .espacioOcupar{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    width: 75%;
+}
+
+.botonForm{
+    align-self: flex-start;
+    background-color: var(--verdeOscuro);
+    color: var(--blanco);
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .formulario{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-
 }
 
 .dentroForm{
@@ -17,8 +31,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap:5px;
 }
 
 .labelForm{
     color: var(--textoForm)
+}
+
+#nameDiv{
+    margin-right: 2.5%;
+}
+#emailDiv{
+    margin-left: 2.5%;
+}
+#mensaje{
+    width: 205%;
+    color: var(--textoForm);
+}
+
+.botonForm:hover{
+    background-color: var(--verdeClaro);
+    color: var(--verdeOscuro)
 }

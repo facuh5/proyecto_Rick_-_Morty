@@ -1,7 +1,7 @@
 import '../Inputs/Input.css'
 
-export default function Input({tipo}) {
+export default function Input({tipo, identificador}) {
     return (
-        <input type={tipo} className="inputForm"></input>
+        <input type={tipo} id={identificador} className="inputForm form-control"></input>
     )
 }

@@ -2,24 +2,28 @@ import '../Form/Form.css'
 import Input from '../Inputs/Input'
 
 export default function Form () {
+
+    function pasarDatos(){
+        console.log("Se apretó el botón")
+    }
+
     return (
         <main className='espacioOcupar'>
             <form className='formulario'>
-                <div id='name' className='dentroForm'> 
-                    <label className='labelForm'>Name</label>
-                    <Input tipo="text"/>
+                <div id='nameDiv' className='dentroForm'> 
+                    <label className='labelForm' htmlFor='name'>Name</label>
+                    <Input tipo="text" identificador='name'/>
                 </div>
-                <div id='email' className='dentroForm'>
-                    <label className='labelForm'>Email</label>
-                    <Input tipo="email"/>
+                <div id='emailDiv' className='dentroForm'>
+                    <label className='labelForm' htmlFor='email'>Email</label>
+                    <Input tipo="email" identificador='id'/>
                 </div>
-                <div id='mensaje' className='dentroForm'>
-                    <label className='labelForm'>Message</label>
-                    <Input tipo="password"/>
+                <div id='mensajeDiv' className='dentroForm'>
+                    <label className='labelForm' htmlFor='mensaje'>Message</label>
+                    <textarea id='mensaje' rows={5} className='form-control'></textarea>
                 </div>
-                
-                <Input tipo="submit" id='submit'/>
             </form>
+            <button type='submit' className='botonForm' onClick={pasarDatos}>Sign in</button>
         </main>
     )   
 }
