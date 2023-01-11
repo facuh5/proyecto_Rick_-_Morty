@@ -3,12 +3,14 @@ import './App.css';
 import Navegation from './Componentes/Navegator/Navegator';
 import Characters from './Componentes/Characters/Characters';
 import Contact from './Componentes/Contact/Contact';
+import Router from './Router/Router';
 
 function App() {
   return (
     <div className="App">
+      <Router/>
       {/* <Contact/> */}
-      <Characters/>
+      {/* <Characters/> */}
       {/* <Navegation/> */}
       {/* <Home/> */}
     </div>

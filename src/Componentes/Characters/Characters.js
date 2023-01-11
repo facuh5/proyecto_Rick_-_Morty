@@ -6,10 +6,10 @@ import Filter from '../Filters/Filter';
 
 export default function Characters(){
     
-    let [arrayCompleto, setArrayCompleto]=useState([])
-    let [arrayActual, setArrayActual]=useState([])
-    let [filtradoActual, setFiltradoActual]=useState([])
-    // let filtrosActivos = 0
+    let [arrayCompleto, setArrayCompleto]=useState([]) // guarda la info traída de la API (completa)
+    let [arrayActual, setArrayActual]=useState([]) // guarda los distintos cambios generados con la info de la API
+    let [filtradoActual, setFiltradoActual]=useState([]) // guarda los filtros aplicados hasta el momento (solo el nombre de los mismos)
+
     // ---------------------------------------------------------------------------------
     // ----------------------- Manejo de la API (info) ---------------------------------
     // ---------------------------------------------------------------------------------
@@ -37,73 +37,58 @@ export default function Characters(){
     // ------------------------- Manejo de los filtros ---------------------------------
     // ---------------------------------------------------------------------------------
     
-    
-
     const resultadoFiltro =(event)=>{
-        // se fija si esta o no checked,tildado
+        // Defino en una variable el valor del filtro apretado
         let datoFiltro=event.target.value
+        // Se fija si esta o no checked (tildado)
         if(event.target.checked){
-                
+                // Corrobora si debe modificar según el status del personaje
                 if(datoFiltro === "Alive" || datoFiltro === "Dead"){
                     let resultado= arrayActual.filter((ch)=> ch.status === datoFiltro)//nuevo array con solo los elementos que cumplen la condicion
-                    // setFiltradoActual(filtradoActual.concat(datoFiltro))
-                let acumuloFiltros = filtradoActual
+                    // Manejo de la lista de filtros ya aplicados
+                    let acumuloFiltros = filtradoActual
                     acumuloFiltros.push(datoFiltro)
                     setFiltradoActual(acumuloFiltros)
-                    setArrayActual(resultado)
-                    console.log(acumuloFiltros)
-                    console.log(arrayActual)
+                    setArrayActual(resultado) // modificación de los personajes que se muestran en pantalla según el filtro aplicado
                 }
+                // Corrobora si debe modificar según el gender del personaje
                 if(datoFiltro === "Female" || datoFiltro === "Male"){
                     let resultado= arrayActual.filter((ch)=> ch.gender === datoFiltro)
+                    // Manejo de la lista de filtros ya aplicados
                     setArrayActual(resultado)
-                    // setFiltradoActual(filtradoActual.concat(datoFiltro))
                     let acumuloFiltros = filtradoActual
                     acumuloFiltros.push(datoFiltro)
-                    setFiltradoActual(acumuloFiltros)
-                    console.log(acumuloFiltros)
+                    setFiltradoActual(acumuloFiltros) // modificación de los personajes que se muestran en pantalla según el filtro aplicado
                 }
+                // Corrobora si debe modificar en base a un origin (name) desconocido
                 if(datoFiltro === "unknown"){
                     let resultado= arrayActual.filter((ch)=> ch.origin.name === datoFiltro)
-                    // setFiltradoActual(filtradoActual.concat(datoFiltro))
+                    // Manejo de la lista de filtros ya aplicados
                     setArrayActual(resultado)
                     let acumuloFiltros = filtradoActual
                     acumuloFiltros.push(datoFiltro)
-                    setFiltradoActual(acumuloFiltros)
-                    console.log(acumuloFiltros)
+                    setFiltradoActual(acumuloFiltros) // modificación de los personajes que se muestran en pantalla según el filtro aplicado
                 } 
         }else{
-            // DE LA LISTA DE LOS FILTROS APLICADOS ACTUALMENTE (SOLO EL NOMBRE DE LOS FILTROS) QUITO DE LA MISMA EL FILTRO DESSELECCIONADO
-            console.log(event.target.value)
-            let array = filtradoActual
-            array.splice(array.indexOf(event.target.value), 1)
-            setFiltradoActual(array)
-            // TRAER TODOS LOS FILTROS CNDO SE DESSELECCIONE UNO
-            //setArrayActual(arrayCompleto)
-
-            // NO QUEREMOS ESO ^, ENTONCES PROBAMOS ESTO:
-            let fl = arrayCompleto
-            for (let index = 0; index < array.length; index++) {
-                const element = array[index];
+            let listaFiltrosAplicados = filtradoActual // lista de los filtros aplicados hasta el momento
+            let listaAMostrarPorPantalla = arrayCompleto // 
+            // Eliminación de la lista del filtro "cancelado" y actualización de la misma en el state
+            listaFiltrosAplicados.splice(listaFiltrosAplicados.indexOf(datoFiltro), 1)
+            setFiltradoActual(listaFiltrosAplicados)
+            // Aplica 1 por 1 a todos los personajes traídos por la API los filtros que se mantienen seleccionados
+            for (let index = 0; index < listaFiltrosAplicados.length; index++) {
+                const element = listaFiltrosAplicados[index];
                 if(element === "Alive" || element === "Dead"){
-                    fl = fl.filter((ch) => ch.status === element)
-                    console.log("el status es: ", element)
-                    console.log(fl)
+                    listaAMostrarPorPantalla = listaAMostrarPorPantalla.filter((ch) => ch.status === element)
                 }
                 if(element === "Female" || element === "Male"){
-                    fl = fl.filter((ch) => ch.gender === element)
-                    console.log("el gender es: ", element)
-                    console.log(fl)
+                    listaAMostrarPorPantalla = listaAMostrarPorPantalla.filter((ch) => ch.gender === element)
                 }
                 if(element === "unknown"){
-                    fl = fl.filter((ch) => ch.origin.name === element)
+                    listaAMostrarPorPantalla = listaAMostrarPorPantalla.filter((ch) => ch.origin.name === element)
                 }
             }
-            setArrayActual(fl)
-
-
-            // ver como hacer para que si hay 2 filtros activados y se quita uno el otro se mantenga (contador)
-
+            setArrayActual(listaAMostrarPorPantalla) // // modificación de los personajes que se muestran en pantalla según el filtro dejado de aplicar
         }
     }
 
