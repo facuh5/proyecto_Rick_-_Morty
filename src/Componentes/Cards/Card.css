@@ -37,11 +37,13 @@
     white-space: nowrap;
 }
 
-
 /* TARJETA INVISIBLE */
 
+.invisibilizar{
+    display: none;
+}
+
 .parteInvisible{
-    /* display: none; */
     width: 100%;
     margin: 10px;
 }

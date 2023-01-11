@@ -2,6 +2,7 @@ import Card from '../Cards/Card'
 import '../Cards/CardInformation.css'
 
 export default function CardInformation({lista}){
+
     return(
         <section className='contenedorTarjetas'>
 

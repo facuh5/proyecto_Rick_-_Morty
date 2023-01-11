@@ -1,11 +1,16 @@
+import { useEffect } from 'react'
 import '../Cards/Card.css'
 
 export default function Card({infoPersonaje}){
-    
+    // useEffect(()=>{
+    //     if (infoPersonaje.id == "n6" || infoPersonaje.id == "n20"){
+    //         document.querySelector(infoPersonaje.id).classList.add("tarjetaMasAncha")
+    //     }
+    // })
     return(
-        <div className="tarjetaIndividual" id={()=> "n" + toString(infoPersonaje.id)}>
+        <div className="tarjetaIndividual" id={"n" + infoPersonaje.id}>
 
-            <div className="parteVisible" >
+            <div className="parteVisible">
                 <img src={infoPersonaje.image}/>
                 <h2 className='nombrePersonaje'>{infoPersonaje.name}</h2>
                 <button className='visible'>Now More...</button>
