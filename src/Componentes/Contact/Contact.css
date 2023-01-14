@@ -11,8 +11,9 @@
     color: var(--textoForm);
     font-size: 2.5em;
     padding: 20px;
-    text-align: left;
-    margin-left:230px;
+    text-align: center;
+    /* margin-left:230px; */
+    width: 65%;
 }
 
 .tituloInformativo{

@@ -2,40 +2,26 @@ import { useEffect, useState } from 'react'
 import '../Cards/Card.css'
 
 export default function Card({infoPersonaje}){
-    // useEffect(()=>{
-    //     if (infoPersonaje.id == "n6" || infoPersonaje.id == "n20"){
-    //         document.querySelector(infoPersonaje.id).classList.add("tarjetaMasAncha")
-    //     }
-    // })
 
-    let [cartaSimple, setCartaSimple] = useState(true)
+    let [cartaSimple, setCartaSimple] = useState(true)  //booleano que determina si debe abrirse o no la información "adicional" de la carta de los personajes
 
-    // let cartaSimple = true
-    
-    // function mostrarOcultar() {
-    //     cartaSimple = false
-    // }
-
-    // function mostrar() {
-    //     cartaSimple = true
-    // }
+    //Modifica el valor de 'cartaSimple' --> hace que se modifique el valor del booleano que determina si debe o no mostrarse toda la información completa del personaje
     function mostrarOcultar() {
         setCartaSimple(!cartaSimple)
-    }
-
-    // useEffect(()=>{
-    //     setCartaSimple(true)
-    // })
+    } 
+    //tarjetaIndividual d-flex imagen-fluid
 
     return(
-        <div className="tarjetaIndividual" id={"n" + infoPersonaje.id}>
-
+        <div className="jj " id={"n" + infoPersonaje.id}>
+            {/* Tarjeta/carta del  personaje simple, solo con la información básica */}
             <div className="parteVisible">
                 <img src={infoPersonaje.image}/>
                 <h2 className='nombrePersonaje'>{infoPersonaje.name}</h2>
                 <button className={cartaSimple ? 'visible' : 'invisibilizar'} onClick={mostrarOcultar}>Now More...</button>
             </div>
-            {!cartaSimple?
+
+            {!cartaSimple? // <--- función js para determinar si debe o no mostrarse dicha información
+                // Parte de la tarjeta/carta del personaje que contiene toda la información "adicional" del mismo
                 <div className='parteInvisible'>
                     <button className='cruz ' onClick={mostrarOcultar}>X</button>
                     <div className='renglonInformativo'>

@@ -3,8 +3,12 @@
 .contenedorTarjetas{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    /* justify-content: center; */
     width: 70%;
     margin: auto;
     grid-gap: 20px;
+    /* display: flex;
+    flex-wrap: nowrap */
+    
+    flex: auto;
 }

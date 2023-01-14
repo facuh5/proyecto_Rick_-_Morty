@@ -3,11 +3,20 @@
 .tarjetaIndividual{
     background-color: var(--fondoTarjetas);
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: nowrap; */
+    flex:auto;
+}
+
+.jj{
+    display: flex;
+    justify-content:center ;
+    background-color: var(--fondoTarjetas);
+    
+    flex:auto;
 }
 
 .parteVisible{
-    
+    /* flex: auto; */ /* <--- hace que se centren las demás tarjetas */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -17,35 +26,40 @@
     padding: 10px;
 }
 
-.visible{
+.visible{ /* ya chequeado */
     background-color: var(--verdeClaro);
     color: var(--verdeOscuro);
     cursor:pointer;
-    padding: 10px;
-    border-style: none;
-    border-radius: 10px;
-    font-size: medium;
+    padding: 10px; 
+    border-style: none; /* <-- le quita el borde de color negro */
+    border-radius: 10px; /* <-- redondea las esquinas del botón */
+    align-self: flex-end; /* <-- lo ubica al botón en el costado dercho de la carta */
 }
 
-.nombrePersonaje{
+.nombrePersonaje{ /* ya chequeado */
     color: var(--blanco);
     margin: 0px;
     font-size: 1.8em;
-}
-
-.tarjetaMasAncha{
     white-space: nowrap;
 }
 
-/* TARJETA INVISIBLE */
+.tarjetaMasAncha{ 
+    white-space: nowrap;
+}
 
-.invisibilizar{
+.invisibilizar{ /* ya chequeado */ 
     display: none;
 }
 
+
+/* TARJETA INVISIBLE */
+
 .parteInvisible{
-    width: 100%;
+    /* width: 100%; */
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    /* flex:auto; */
 }
 
 .cruz{
@@ -54,6 +68,8 @@
     border: none;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 5px;
+    align-self: flex-end;
 }
 
 .renglonInformativo{
@@ -79,3 +95,4 @@
     cursor: pointer;
     background-color: var(--verdeClaro);
 }
+
