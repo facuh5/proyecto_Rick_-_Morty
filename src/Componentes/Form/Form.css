@@ -1,5 +1,6 @@
 @import url(../prestablecidos.css);
 
+
 .espacioOcupar{
     display: flex;
     flex-direction: column;
@@ -9,24 +10,13 @@
     width: 75%;
 }
 
-.botonForm{
-    align-self: flex-start;
-    background-color: var(--verdeOscuro);
-    color: var(--blanco);
-    border:none;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
 .formulario{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
 }
 
-.dentroForm{
+.dentroForm{ /* <--- clase referente a los div que contienen a c/u de los inputs y labels del formulario */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,6 +38,19 @@
     width: 205%;
     color: var(--textoForm);
 }
+
+.botonForm{
+    align-self: flex-start;
+    background-color: var(--verdeOscuro);
+    color: var(--blanco);
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Variaciones que ocurren ante determinadas acciones con el mouse por parte del usuario: */
 
 .botonForm:hover{
     background-color: var(--verdeClaro);
