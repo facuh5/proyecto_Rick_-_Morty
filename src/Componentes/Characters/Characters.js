@@ -1,6 +1,6 @@
 import '../Characters/Characters.css'
 import Navegation from '../Navegator/Navegator'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, Fragment} from 'react'
 import CardInformation from '../Cards/CardInformation';
 import Filter from '../Filters/Filter';
 
@@ -28,7 +28,7 @@ export default function Characters(){
         setArrayCompleto(infoPersonajes);
     }
 
-    //Hace que carguen las tarjetas con la información de la API ni bien carga la página
+    // Hace que carguen las tarjetas con la información de la API ni bien carga la página
     useEffect(()=>{
         mostrarInfo() 
     },[])
@@ -71,7 +71,7 @@ export default function Characters(){
                 } 
         }else{
             let listaFiltrosAplicados = filtradoActual // lista de los filtros aplicados hasta el momento
-            let listaAMostrarPorPantalla = arrayCompleto // 
+            let listaAMostrarPorPantalla = arrayCompleto // lista con toda la información traída de la API
             // Eliminación de la lista del filtro "cancelado" y actualización de la misma en el state
             listaFiltrosAplicados.splice(listaFiltrosAplicados.indexOf(datoFiltro), 1)
             setFiltradoActual(listaFiltrosAplicados)
@@ -94,9 +94,8 @@ export default function Characters(){
 
 
     return(
-        <div>
+        <Fragment>
             <Navegation/>
-            {/* Probar hacer otro componente que contenga TODO lo de los filtros */}
             <section className='filtros'>
                 <h1 className='titFiltros'>Filters</h1>
                 <div className='contFiltro'>
@@ -108,6 +107,6 @@ export default function Characters(){
                 </div>
             </section>
             <CardInformation lista={arrayActual}/>
-        </div>
+        </Fragment>
     )
 }

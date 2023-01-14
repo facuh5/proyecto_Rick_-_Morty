@@ -1,98 +1,98 @@
 @import url(../prestablecidos.css);
 
-.tarjetaIndividual{
-    background-color: var(--fondoTarjetas);
-    display: flex;
-    /* flex-wrap: nowrap; */
-    flex:auto;
-}
 
-.jj{
+.tarjetaPersonaje{
     display: flex;
     justify-content:center ;
     background-color: var(--fondoTarjetas);
-    
-    flex:auto;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
 }
 
-.parteVisible{
-    /* flex: auto; */ /* <--- hace que se centren las demás tarjetas */
+.tarjetaVisible{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-    border-radius: 5px;
     padding: 10px;
+    border-radius: 5px;
 }
 
-.visible{ /* ya chequeado */
+.btnVisible{
     background-color: var(--verdeClaro);
     color: var(--verdeOscuro);
     cursor:pointer;
     padding: 10px; 
     border-style: none; /* <-- le quita el borde de color negro */
-    border-radius: 10px; /* <-- redondea las esquinas del botón */
-    align-self: flex-end; /* <-- lo ubica al botón en el costado dercho de la carta */
+    border-radius: 10px;
+    align-self: flex-end;
 }
 
-.nombrePersonaje{ /* ya chequeado */
+.nombrePersonaje{
     color: var(--blanco);
     margin: 0px;
     font-size: 1.8em;
-    white-space: nowrap;
 }
 
-.tarjetaMasAncha{ 
-    white-space: nowrap;
-}
-
-.invisibilizar{ /* ya chequeado */ 
+.invisibilizar{
     display: none;
 }
 
 
-/* TARJETA INVISIBLE */
+/* TARJETA INVISIBLE: */
 
 .parteInvisible{
-    /* width: 100%; */
-    margin: 10px;
     display: flex;
     flex-direction: column;
-    /* flex:auto; */
+    margin: 50px;
+    margin-left: 0px;
 }
 
-.cruz{
+.btnCruz{
     background-color: var(--verdeClaro);
     color: var(--verdeOscuro);
     border: none;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     align-self: flex-end;
 }
 
-.renglonInformativo{
+.infoOculta{
+    margin: 0px;
+    width: 400px;
+    display: block;
+}
+
+.textoPresentacion{
+    list-style-type: none;
     border: solid;
-    border-color: black;
-    border-width: 0.5px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 0.5px; /* <-- ancho del borde asignado */
     margin: 0px;
-    padding: 5px;
-}
-
-.pTitulo{
-    margin: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     color: var(--blanco);
-    text-align: center;
 }
 
-.pInfo{
+.infoPersonaje{
     color: var(--blanco);
     font-weight: bold;
+    font-size: 1.3em;
 }
 
-.renglonInformativo:hover{
-    cursor: pointer;
+/* Modificaciones según comportamiento del mouse */
+
+.textoPresentacion:hover{
     background-color: var(--verdeClaro);
+    color: var(--verdeOscuro);
+    cursor: pointer;
 }
 
+.textoPresentacion:hover .infoPersonaje{
+    background-color: var(--verdeClaro);
+    color: var(--verdeOscuro);
+}

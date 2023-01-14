@@ -9,7 +9,7 @@ export default function CardInformation({lista}){
             {lista.map((elemento)=>{
                 return <Card key={elemento.id} infoPersonaje={elemento}/>
             })}
-
+            
         </section>
     )
 }

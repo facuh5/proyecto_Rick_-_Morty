@@ -1,14 +1,11 @@
 @import url(../prestablecidos.css);
 
 .contenedorTarjetas{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* justify-content: center; */
-    width: 70%;
+    width:85%;
     margin: auto;
-    grid-gap: 20px;
-    /* display: flex;
-    flex-wrap: nowrap */
-    
-    flex: auto;
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    gap: 20px;
+    flex-wrap: wrap;
 }

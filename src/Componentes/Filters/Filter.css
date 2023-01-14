@@ -1,5 +1,6 @@
 @import url(../prestablecidos.css);
 
+/* Afecta a lo que es el botón (checkbox) y nombre del filtro */
 .filtroInd{
     background-color: var(--verdeOscuro);
     display: flex;
@@ -23,6 +24,8 @@ p{
     padding: 5px;
     margin:0px;
 }
+
+/* modificaciones que suceden según las distintas acciones del mouse en la pantalla: */
 
 .botonFiltro:active{
     background-color: var(--fondoTarjetas);

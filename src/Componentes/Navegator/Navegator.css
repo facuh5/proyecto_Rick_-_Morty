@@ -23,8 +23,3 @@ nav{
 ul{
     margin-right: 30px;
 }
-
-.seleccionado{
-    background-color: var(--verdeClaro);
-    color: var(--verdeOscuro);
-}

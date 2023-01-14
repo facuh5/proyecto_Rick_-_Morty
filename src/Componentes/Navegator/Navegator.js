@@ -4,14 +4,6 @@ import '../Navegator/Navegator.css';
 
 export default function Navegation(){
 
-    // para cuando se le agregue la opcion de clickear a los botonoes(items)
-    // function seleccionado(){
-    //     let identificador = event
-    //     let id = "#" + identificador
-    //     let aModificar = document.querySelector(id)
-    //     aModificar.classList.toggle("seleccionado")
-    // }
-
     return(
         <header>
             <nav>

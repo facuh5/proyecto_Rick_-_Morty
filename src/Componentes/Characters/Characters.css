@@ -9,21 +9,15 @@
     width: 85%;
     margin: 50px auto;
     color: var(--verdeClaro);
-    /* padding: 30px; */
     
 }
 
 .titFiltros{
     color:var(--verdeClaro);
-    /* font-weight: bold; */
 }
 
 .contFiltro{
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 45px; */
     display: flex;
     gap:50px;
-    /*justify-content: center; */
 }
 

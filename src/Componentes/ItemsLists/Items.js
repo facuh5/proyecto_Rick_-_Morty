@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 export default function Item({prop, clase, identificador}){
     
+    // addLink(): none ---> String
+    // Genera la url a la que el ítem debe redirigir al ser oprimido
     function addLink(){
         if(prop === "Home"){
             return "/"
@@ -12,36 +14,8 @@ export default function Item({prop, clase, identificador}){
         }
     }
 
-    // function claseUsar(){
-    //     let seleccionado = document.querySelector(".item-seleccionado")
-    //     console.log(seleccionado)
-    //     if (seleccionado !== null){
-    //         seleccionado.classList.toggle("item-seleccionado")
-    //         seleccionado.classList.toggle("item")
-    //     }
-        
-        
-    //     console.log("hasta acá llega")
-    //     if(identificador !== "Home"){
-    //         let actual = document.getElementById(identificador)
-    //         actual.classList.toggle("item-seleccionado")
-    //         actual.classList.toggle("item")
-    //     }
-    // }
-
-    // function claseUsar(){
-    //     let seleccionadoActual = document.querySelector(".item-seleccionado")
-    //     if (seleccionadoActual !== null){
-    //         seleccionadoActual.classList.toggle("item-seleccionado")
-    //         seleccionadoActual.classList.toggle("item")
-    //     }   
-    //     if(identificador !== "Home"){
-    //         return "item-seleccionado"
-    //     } else {
-    //         return "item"
-    //     }
-    // }
-
+    // botonSeleccionado(): none ---> String
+    // Devuelve la className correspondiente según si el usuario está o no en la pestaña a la que redirige dicho botón
     function botonSeleccionado(){
         let btnSel = window.location.pathname
         if (("/"+prop) === btnSel && prop !== "Home"){
@@ -51,8 +25,6 @@ export default function Item({prop, clase, identificador}){
             return clase
         }
     }
-
-//className={clase}
 
     return(
         <Link to={addLink()} className="link">
